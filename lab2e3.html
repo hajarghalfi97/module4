@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <title>Module4 lab2 exercise #2</title>
+      <style>
+         body {
+         font-family : Arial, Helvetica , sans-serif ;
+         background-color : #e3f2fd;
+         }
+         .card {
+         padding: 10px;
+         }
+         .card-title {
+         font-weight : 600;
+         font-size : 3em;
+         padding: 0 0 10px 0;
+         }
+         .card-description {
+         font-weight : 400;
+         font-size : 2em
+         }
+
+
+         .portfolio-items{display:flex;};
+
+         .portfolio-item{padding:2em;};
+
+
+      </style>
+   </head>
+
+    
+   <body>
+      <template id="artist-template" >
+         <div class="portfolio-item">
+            <div class="portfolio-item-title" ></div>
+               <div class="card-title" ></div>
+               <div class="portfolio-items" ></div>
+               <img class="portfolio-item-image" width="505" >
+            
+         </div>
+      </template >
+    
+      
+      <template id="portfolio-template" >
+        <div class="card">
+           <div class="card-body" >
+              <div class="card-title" ></div>
+              <div class="portfolio-items" ></div>
+           </div>
+        </div>
+     </template >
+      
+     <div id="card-list"></div>
+
+      <script>
+
+const artist={
+    name:"Van gogh",
+    portfolio: [
+        {title: "portrait", url:"https://collectionapi.metmuseum.org/api/collection/v1/iiif/436532/1671316/main-image"},
+    
+
+{title:"sky", url:"https://mymodernmet.com/wp/wp-content/uploads/2020/11/White-house-night-van-goh-worldwide-2.jpg"},
+
+]
+}
+
+
+const artists={
+    name:"Van gogh",
+    portfolio: [
+        {title: "portrait", url:"https://collectionapi.metmuseum.org/api/collection/v1/iiif/436532/1671316/main-image"},
+         {title:"sky", url:"https://mymodernmet.com/wp/wp-content/uploads/2020/11/White-house-night-van-goh-worldwide-2.jpg"},
+
+],
+
+   name:"Banksys",
+    portfolio: [
+        {title: "heart", url:"https://www.ecosolutions.co.uk/wp-content/uploads/2022/06/Girl-with-Balloon-1.webp"},
+         {title:"Banana", url:"https://cdn.sanity.io/images/fvhcpakg/production/65f5493b7992d62a1017c9eef1aacf4700660f8e-1024x713.jpg?auto=format&q=60&w=1024"},
+]
+   }
+
+
+
+         const data = [{name: 'bob', age: 23}, {name: 'alice', age: 39}];
+
+         
+
+        function addArtist(title, text) {
+        // clone the template
+        const template = document.getElementById("artist-template").content.cloneNode(true);
+        // populate the template
+        template.querySelector('.card-title').innerText =name;
+        
+        portfolio.forEach(item => {
+        const template = document.getElementById("card-template").content.cloneNode(true);
+        template.querySelector('.portfolio-item-title').innerText =item.title;
+        template.querySelector('.portfolio-item-image').src =item.url;
+        template.querySelector('.portfolio-item-image').alt =item.url;})
+    
+        document.querySelector('#card-list').appendChild(template);
+
+        addArtist(artist.name, artist.portfolio)
+        artists.forEach(artist => addArtist(artist.name,artist.portfolio ))
+
+
+        }
+
+
+        </script>
+   </body>
+</html>
