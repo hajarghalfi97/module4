@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+<meta charset="UFT-8">
+<meta name="viewport" content="width=device-width,initial-src">
+<title> Calculator</title>
+<style>
+body {
+    background: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: serif;
+    font-size: 25px;
+    height: 100vh;
+    margin: default; /* Ensure no default margin */
+}
+
+#Calculator {
+    outline: auto;
+    width: 450px;
+    border: 5px solid rgb(96, 0, 128);
+    border-style: double;
+    border-radius: 13px;
+    padding: 1px;
+    margin: 20px;
+    position: center; /* Enable absolute positioning for child elements */
+}
+
+#result {
+    background: rgb(242, 244, 242);
+    border-radius: 7px;
+    text-align: right;
+    font-size: 6em;
+    min-height: 5em;
+    line-height: 2.5;
+    padding-right: 10em;
+    font-size: 30px;
+    margin: 0em; /* Add some space between the result and buttons */
+}
+
+#buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+button {
+    margin: 0.2em;
+    border-style: double;
+    width: calc(25% - 1em); /* Adjust the button width for proper layout */
+    background: rgb(215, 135, 219);
+    color: white;
+    font-weight: bold;
+    padding: 2em;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Reset button styles */
+.resetButton {
+    background-color: rgb(72, 19, 77);
+    position: left; /* Position it absolutely relative to #Calculator */
+    top: 0; /* Align it to the top */
+    right: 3px; /* Align it to the right side */
+    width: 100%; /* Make the width span the full calculator width */
+    height: 50%; /* Make it cover half the height of the calculator */
+    font-size: 2em; /* Make the text inside the reset button larger */
+    padding: 1em; /* Add padding to give the button enough height */
+    color: white;
+    border-radius: 7px;
+    text-align: center; /* Center the text inside the button */
+    
+    justify-content: center;
+    align-items: center;
+}
+</style>
+</head>
+<body>
+
+
+<div id="Calculator">
+<div id="clearbutton">
+<div id="result"></div>
+<div id="buttons">
+
+ <button class="numberButton"    Onclick="clickNumber(1)">1</button>
+ <button class="numberButton"    Onclick="clickNumber(2)">2</button>
+ <button class="numberButton"    Onclick="clickNumber(3)">3</button>
+ <button class="operatorButton"    Onclick="clickOperator('+')">+</button>
+
+ 
+
+
+ <button class="numberButton"    Onclick="clickNumber(4)">4</button>
+ <button class="numberButton"    Onclick="clickNumber(5)">5</button>
+ <button class="numberButton"    Onclick="clickNumber(6)">6</button>
+ <button class="operatorButton"    Onclick="clickOperator('-')">-</button>
+ 
+
+ <button class="numberButton"    Onclick="clickNumber(7)">7</button>
+ <button class="numberButton"    Onclick="clickNumber(8)">8</button>
+ <button class="numberButton"    Onclick="clickNumber(9)">9</button>
+ <button class="operatorButton"    Onclick="clickOperator('/')">/</button>
+ <button class="numberButton"   Onclick="clickNumber(0)">0</button>
+
+ 
+
+
+
+    <button class="equalsButton"    Onclick="showResult()">=</button>
+
+ <button class="numberButton"    Onclick="clickOperator('*')">*</button> 
+ <button class="resetButton"    Onclick="clearResult()">CL</button>
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</div>
+</div>
+
+
+
+
+<script src ="js/calculator2.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
